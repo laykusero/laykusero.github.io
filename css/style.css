@@ -64,47 +64,43 @@ body{
 .toggle-state:checked ~ .indicator {
   transform: translate3d(25%, 0, 0);
 }
-  .banner{
-    width: 100%;
-    height: calc(100vh - 100px);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    place-items: center;
-  }
-  .content{
-    width: 200px;
-    height: 250px;
-    border-radius: 17px;
-    background: #e4e4e4;
-    box-shadow:  15px 15px 50px #bebebe,
-    -20px -20px 50px #ffffff;
-    background-image: url(../images/profile.png);
-    background-size:cover;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.banner {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 100px);
+}
 
-  }
-  /* text */
-  .title{
-    padding-top: 50%;
-    text-shadow: 2px 3px 5px #989898;
-    
-  }
-  h1{
-    font-family: 'Overpass', sans-serif;
-    color: #101010;
-    font-size: 50px;
-    text-align: center;
-  }
-  .class1{
-    color: #ffffff;
-    font-size: 20px;
+.content {  
+  margin-top: -5%;
+  width: 170px;
+  height: 200px;
+  border-radius: 17px;
+  background: #e4e4e4;
+  box-shadow: 15px 15px 50px #bebebe, -20px -20px 50px #ffffff;
+  background-image: url(../images/profile.png);
+  background-size: cover;
+}
+
+/* text */
+.title {
+  margin-top: -15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 3px 5px #989898
+}
+
+h1 {
+  font-family: 'Overpass', sans-serif;
+  color: #101010;
+  font-size: 50px;
+  text-align: center;
+}
+
+.class1 {
+  color: #ffffff;
+  font-size: 20px;
 }
 /* text */
 /* button */
@@ -184,12 +180,19 @@ a{
 @media (max-width: 768px) {
 
 h1{
-  font-size: 25px;
+  margin-top: -100px;
+  font-size: 35px;
 }
 .class1{
   font-size: 15px;
 }
-
+.dark-mode h1{
+  margin-top: -100px;
+  font-size: 35px;
+}
+.dark-mode .class1{
+  font-size: 15px;
+}
 }
 /**/
 
@@ -210,11 +213,12 @@ body.dark-mode {
   background: #212121;
   box-shadow: 15px 15px 30px rgb(25, 25, 25),
              -15px -10px 22px rgb(40, 40, 40);
+  margin-top: -5%;
+  width: 170px;
+  height: 200px;
+  border-radius: 17px;
   background-image: url(../images/profile.png);
-  background-size:cover;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  background-size: cover;
 }
 .dark-mode .label {
   display: inline-flex;
@@ -247,12 +251,13 @@ body.dark-mode {
     8px 4px 12px 0px rgb(16, 16, 16);
 }
 .dark-mode .title{
-  padding-top: 50%;
   text-shadow: 2px 3px 5px #000000;
+  
 }
 .dark-mode h1{
   font-family: 'Overpass', sans-serif;
   color: #ffffff;
+  text-align: center;
 }
 .dark-mode .class1{
   color: #4c4c4c;
@@ -330,11 +335,14 @@ body.dark-mode {
   }
   .boutme{
     flex: 1;
-    text-align: center;
+    text-align: justify;
     font-family: "Century Gothic",
     CenturyGothic, AppleGothic, sans-serif;
     font-size: 30px;
     font-weight: bolder;
+  }
+  .secondtext{
+    padding: 10px;
   }
   .secondtext-name{
   margin: 42px;
@@ -602,6 +610,10 @@ body.dark-mode {
   width: 90%;
   
 }
+h3{
+  font-family: "Century Gothic",
+  CenturyGothic, AppleGothic, sans-serif;
+}
 
 .front-end, .back-end, .others{
   display: flex;
@@ -676,8 +688,6 @@ body.dark-mode {
 h3 {
   font-size: 1.5em;
   margin-bottom: 20px;
-  font-family: "Century Gothic",
-  CenturyGothic, AppleGothic, sans-serif;
 }
 @media (max-width: 1000px) {
   .skills {
@@ -804,15 +814,13 @@ footer .copyright {
   background-color: #222;
   padding: 20px 0;
   text-align: center;
-
+  
 }
 
 footer .copyright p {
   margin: 0;
   color: #999;
   font-size: 14px;
-  font-family: "Century Gothic",
-  CenturyGothic, AppleGothic, sans-serif;
 }
 .social-links li {
   list-style-type: none;
